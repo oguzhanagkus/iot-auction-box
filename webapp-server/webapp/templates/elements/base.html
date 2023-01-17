@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "elements/header.html" %}
+    {% block stylesheet %}{% endblock %}
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body id="page-top">
+
+<div id="wrapper">
+    <!-- Sidebar -->
+    {% include "elements/side_bar.html" %}
+
+    <!-- Content -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow d-block d-sm-none">
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </nav>
+
+            <div class="container-fluid mb-4 mt-4">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to top button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+</div>
+
+<!-- Scripts -->
+
+{% include "elements/script.html" %}
+{% block script %}{% endblock %}
+
+</body>
+</html>

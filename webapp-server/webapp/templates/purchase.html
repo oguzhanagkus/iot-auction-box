@@ -1,0 +1,43 @@
+{% extends "elements/base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<!-- Heading -->
+<h1 class="h3 mb-3 text-gray-800">Purchase Item</h1>
+
+<div class="row">
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            {{ name }}
+                        </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ price }}₺</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-box fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Form -->
+<div class="row mt-2">
+    <div class="col-auto">
+        <form id="location_form" action="" method="post" enctype="multipart/form-data">
+            <button type="submit" class="btn btn-primary btn-icon-split mb-4" form="location_form">
+        <span class="icon text-white-50">
+            <i class="fas fa-money-bill"></i>
+        </span>
+                <span class="text">Purchase</span>
+            </button>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

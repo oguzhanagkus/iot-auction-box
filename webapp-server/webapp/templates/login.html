@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "elements/header.html" %}
+    <title>Login</title>
+</head>
+
+<body class="bg-primary">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-12 col-md-9">
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                {% include "elements/alert.html" %}
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-lg-6 mx-auto">
+                            <div class="p-5">
+                                <div class="text-center mb-4">
+                                    <span class="icon text-primary">
+                                        <i class="fas fa-store fa-10x"></i>
+                                    </span>
+                                </div>
+                                <div class="text-center">
+                                    <h1 class="h1 text-gray-900 mb-2">IoT Auction Box</h1>
+                                </div>
+                                <form class="user" action="/login" method="post">
+                                    <div class="form-group">
+                                        <input name="email" type="text" class="form-control form-control-user"
+                                               placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="password" type="password" class="form-control form-control-user"
+                                               placeholder="Password">
+                                    </div>
+                                    <button class="btn btn-primary btn-user btn-block">Login</button>
+                                </form>
+
+                                <div class="text-center mt-2">
+                                    <a class="nav-link" href="/signup"><span>Signup</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "elements/script.html" %}
+
+</body>
+</html>
